@@ -1,0 +1,172 @@
+style.css html {
+  scroll-behavior: smooth;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+.container {
+  width: 80%;
+  margin: auto;
+}
+.flex {
+  display: flex;
+  gap: 1rem;
+}
+.grid {
+  display: grid;
+  gap: 1rem;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* root variables  */
+
+:root {
+  --color-orange: #e85604;
+  --color-dark: #2a2a2a;
+
+  --body-bg: #6ecfc2;
+  --text-color: var(--color-dark);
+  --border-color: var(--color-dark);
+
+  /* for dark mode  */
+  --dark-bg: var(--color-dark);
+  --dark-text-color: #fff;
+  --dark-border-color: #fff;
+}
+
+.wrapper {
+  background: var(--body-bg);
+  min-height: 100vh;
+  color: var(--text-color);
+}
+
+.dark-mode-toggle {
+  position: fixed;
+  top: 8rem;
+  left: 3rem;
+  cursor: pointer;
+}
+
+.dark-mode-toggle:hover {
+  transform: scale(1.5);
+  transition: all 0.3s;
+}
+/* <!-- navbar  --> */
+header {
+  box-shadow: 4px -2px 43.4px 9px rgba(136, 136, 136, 0.99);
+
+  position: sticky;
+  top: 0;
+}
+
+.header {
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 0;
+}
+
+.logo {
+  font-size: 1.3rem;
+  position: relative;
+}
+
+.logo > div:nth-child(1) {
+  font-weight: bolder;
+  margin-right: 1rem;
+}
+
+.line::before {
+  content: "";
+  width: 4px;
+  height: 100%;
+  background: var(--color-orange);
+  position: absolute;
+  left: 45%;
+}
+.navigation {
+  list-style: none;
+  font-weight: bold;
+}
+
+.navigation li a:hover {
+  color: var(--color-orange);
+  transition: all 0.3s;
+}
+#darkMode {
+  display: none;
+}
+/* dark mode activation  */
+#darkMode:checked + .wrapper {
+  --body-bg: var(--dark-bg);
+  --text-color: var(--dark-text-color);
+  --border-color: var(--dark-border-color);
+}
+/* <!-- hero section  --> */
+.hero-section {
+  padding-top: 7rem;
+  color: var(--text-color);
+}
+
+.hero {
+  grid-template-areas: "left right";
+  background: var(--color-orange);
+  padding: 0 2rem;
+}
+
+.left {
+  grid-area: left;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: 10vw;
+}
+
+.left .span {
+  font-size: 1.3rem;
+  font-weight: bolder;
+}
+
+.left .tag {
+  font-size: 2.2rem;
+  font-weight: bolder;
+  letter-spacing: 5px;
+}
+
+.left button {
+  background: var(--dark-bg);
+  border: none;
+  padding: 0.8rem 2rem;
+  color: #fff;
+  cursor: pointer;
+  border-radius: 2rem;
+}
+
+.right {
+  grid-area: right;
+  justify-content: flex-end;
+  align-items: center;
+  margin-top: -5rem;
+}
+.right img {
+  height: 90%;
+}
+/* <!-- banner  --> */
+
+/* <!-- skills section --> */
+
+/* <!-- Projects section --> */
+
+/* <!-- About Me section --> */
+
+/* <!-- Get in touch section --> */
+
+/* <!-- Footer section --> */
